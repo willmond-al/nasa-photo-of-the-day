@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
-import Media from './Media'
+import Image from './Image'
+import Video from "./Video";
 
 
 function App() {
@@ -27,9 +28,10 @@ useEffect(() => {
       <h1>
         NASA'S PHOTO OF THE DAY <span role="img" aria-label='go!'>🚀</span>!
       </h1>
-      <Media data={data}/>
+      {data.media_type==='image' ? <Image data={data}/> : <Video data={data}/>}
     </div>
   );
 }
 
 export default App;
+
