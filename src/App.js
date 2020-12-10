@@ -29,20 +29,38 @@ useEffect(() => {
       <h1>
         NASA'S PHOTO OF THE DAY <span role="img" aria-label='go!'>🚀</span>!
       </h1>
-      <p> Today's date: {data.date}</p>
+      <p className = 'date'> Today's date: {data.date}</p>
       <h3>{data.title}</h3>
       {data.media_type==='image' ? <Image data={data}/> : <Video data={data}/>}
       <div className = 'description'>
-        
+        <p>{ data.explanation }</p>
       </div>
     </StyledApp>
   );
 }
 
 const StyledApp = styled.div`
-  p{
+
+  padding: 3%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  margin:-25px 0;
+
+
+  .date{
     text-decoration: underline;
   }
+
+  .description {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .description p{
+    font-weight: bold;
+  }
+
 `
 
 

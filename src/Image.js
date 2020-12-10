@@ -12,7 +12,9 @@ const Image = (props) => {
 }
 
 const StyledImage = styled.img`
-    width: 60%;
+    width: 45%;
+    border: solid aqua 10px;
+    
 `
 
 export default Image

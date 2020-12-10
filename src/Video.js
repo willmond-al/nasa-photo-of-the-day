@@ -12,7 +12,8 @@ const Video = (props) => {
 }
 
 const StyledVideo = styled.iframe`
-    width: 60%;
+    width: 45%;
+    border: solid aqua 10px;
 `
 
 export default Video
