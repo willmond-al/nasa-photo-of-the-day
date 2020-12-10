@@ -5,7 +5,7 @@ const Image = (props) => {
     const { data } = props
 
     return (
-        <div className = 'video-container'>
+        <div className = 'image-container'>
             <StyledImage src = {data.hdurl} alt='NASA photo of the day' />
         </div>
     )

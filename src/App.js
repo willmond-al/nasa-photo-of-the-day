@@ -3,6 +3,7 @@ import "./App.css";
 import axios from 'axios';
 import Image from './Image'
 import Video from "./Video";
+import styled from 'styled-components'
 
 
 function App() {
@@ -24,14 +25,26 @@ useEffect(() => {
 
 
   return (
-    <div className="App">
+    <StyledApp className="App">
       <h1>
         NASA'S PHOTO OF THE DAY <span role="img" aria-label='go!'>🚀</span>!
       </h1>
+      <p> Today's date: {data.date}</p>
+      <h3>{data.title}</h3>
       {data.media_type==='image' ? <Image data={data}/> : <Video data={data}/>}
-    </div>
+      <div className = 'description'>
+        
+      </div>
+    </StyledApp>
   );
 }
+
+const StyledApp = styled.div`
+  p{
+    text-decoration: underline;
+  }
+`
+
 
 export default App;
 

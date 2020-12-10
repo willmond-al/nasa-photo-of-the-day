@@ -6,13 +6,13 @@ const Video = (props) => {
 
     return (
         <div className = 'video-container'>
-            <iframe src = {data.hdurl} title={data.title}></iframe>
+            <StyledVideo src = {data.hdurl} title={data.title}></StyledVideo>
         </div>
     )
 }
 
-// const StyledVideo = styled.img`
-//     width: 60%;
-// `
+const StyledVideo = styled.iframe`
+    width: 60%;
+`
 
 export default Video
