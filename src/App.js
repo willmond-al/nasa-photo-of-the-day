@@ -33,7 +33,9 @@ useEffect(() => {
       <h3>{data.title}</h3>
       {data.media_type==='image' ? <Image data={data}/> : <Video data={data}/>}
       <div className = 'description'>
-        <p>{ data.explanation }</p>
+      <p>Credits: {data.copyright}</p>
+        <p className = 'blurb'>{ data.explanation }
+          </p>
       </div>
     </StyledApp>
   );
@@ -57,7 +59,7 @@ const StyledApp = styled.div`
     margin: 0 auto;
   }
 
-  .description p{
+  .description .blurb{
     font-weight: bold;
   }
 
